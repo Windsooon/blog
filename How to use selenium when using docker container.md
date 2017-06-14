@@ -1,6 +1,10 @@
-## How to use selenium when using docker container
+---
+title: How to use selenium when using docker container
+date: 2017-06-14 20:39:00
+tags: selenium django docker
+---
 
-###TL;DR
+### TL;DR
 
 Use [zalenium](https://github.com/zalando/zalenium)(for video recording) or [docker-selenium](https://github.com/SeleniumHQ/docker-selenium), follow the docs, pay attantion to
 
@@ -37,7 +41,7 @@ your django_test.py look like this
             super(BaseTestStaticLiveServerTestCase, cls).tearDownClass()
 And everything is done.
     
-###Long version: 
+### Long version: 
 
 Althought my project use docker, but at first I'm not use [zalenium](https://github.com/zalando/zalenium) or [docker-selenium](https://github.com/SeleniumHQ/docker-selenium), and just try to follow the [Selenium docs](https://selenium-python.readthedocs.io/getting-started.html) do it by myself.
 
@@ -66,7 +70,7 @@ run it
     
 If your laptop have GUI and already install Firefox, everything should work well, the script auto open the Firefox browser then done. If you are not using Firefox, you may use [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/getting-started) instead. 
 
-###Now I try to config it with docker, I using Debian as my server. Things become intersting.
+### Now I try to config it with docker, I using Debian as my server. Things become intersting.
 
 ![fun](https://raw.githubusercontent.com/Windsooon/blog/master/imgs/program_work.jpg)
 
@@ -156,7 +160,7 @@ to your html file, then in your test.py
     
 Now you know the javascript error when you run the test even if you don't have GUI. 
 
-###Finally, use docker remote webdriver! 
+### Finally, use docker remote webdriver! 
 
 Docker is great, docker images installed all stuff you need and you just need to connetc it then it work. Wait, if you not care about the port or the network connecting, it will become devil.You may have a look at 
 
