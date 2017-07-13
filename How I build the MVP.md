@@ -25,7 +25,7 @@ which also classfied the youtube channels. I think their application is for data
 How about YouTube itself? When I search [basketball](https://www.youtube.com/channel/UCkcRYjXjAhsBPVH4aeIPxmQ), YouTube will recommend relative channels in the bottom.
 
 
-[Basketball]()
+![Basketball](https://raw.githubusercontent.com/Windsooon/blog/master/imgs/how%20I%20build%20the%20MVP/basketball_channel.png)
 
 
 
@@ -42,9 +42,9 @@ By now, my base idea is classified some hotest channels for the categories that 
 ###Host your code
 Usually I open source all my code in Github. Like [Unicooo](https://unicooo.com/) on [Github](https://github.com/Windsooon/Unicooo-django). Not just because it's free, **I also think Code should be open soure by default**. But this time I choose to use a private one just for pratice, and I'm really to open source. [Bitbucket](https://bitbucket.org/product) is great and offer Unlimited private repos. I only got one problem when I using it. I misset my ssh key on the repo instead of my personal page
 
-[repo]
+![repo](https://raw.githubusercontent.com/Windsooon/blog/master/imgs/how%20I%20build%20the%20MVP/bitbucket_ca.png)
 
-[personal]
+[personal](https://raw.githubusercontent.com/Windsooon/blog/master/imgs/how%20I%20build%20the%20MVP/bitbucket_personal.png?raw=true)
 
 ###Run your code
 I choose [pythonanywhere](http://pythonanywhere.com/), you can use AWS or Digitalocean or whatever you like. But I find pythonanywhere is super easy to set up and their customer service is quite and helpful. Most importantis, you don't have to worry about the nginx settings or other stuff.
@@ -64,8 +64,9 @@ There are a lot of Email hosting on web, I only found [Zoho Mail](https://www.zo
 
 ###Add Google analytics
 For people who haven't use google analytics before. It will let you know which page you user focus and where are they come form like this
-[page]
-[location]
+
+![page](https://raw.githubusercontent.com/Windsooon/blog/master/imgs/how%20I%20build%20the%20MVP/category_view.png)
+![location](https://raw.githubusercontent.com/Windsooon/blog/master/imgs/how%20I%20build%20the%20MVP/location.png)
 
 Remember to filter your own IP in settings.
 
