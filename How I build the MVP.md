@@ -5,7 +5,7 @@ tags: MVP django
 ---
 
 
-Since I built my last MVP [Unicooo](https://unicooo.com/) using more than a year. Spending lots of time to add features I **Guess** users will need.So when I come up with the idea [YouTube classified](http://www.youtubeclassified.com/) and looking at my todo side-project list which contain more than 20 ideas.
+Since I built my last MVP [Unicooo](https://unicooo.com/) using more than a year. Spending lots of time to add features I **Guess** users will need. So when I come up with the idea [YouTube classified](http://www.youtubeclassified.com/) and looking at my todo side-project list which contain more than 20 ideas.
 
 I just wanna deploy it base on the standard by Harry Percival
 
@@ -13,7 +13,7 @@ I just wanna deploy it base on the standard by Harry Percival
 
 [Testing Deployment Using a Staging Site](http://www.obeythetestinggoat.com/book/chapter_manual_deployment.html)
 
-So if your answer is yes either, deploy it now. Forget about the bugs.
+So if your answer is yes two, deploy it now. Forget about the bugs.
 
 
 ### Come up with the idea
