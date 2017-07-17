@@ -1,110 +1,137 @@
 ---
 title: How I built my MVP in two weeks
-date: 2017-07-13 21:25:00
-tags: MVP django 
+date: 2017-07-16 20:00:00
+tags: mvp django side-project
 ---
 
+After spending more than one year developing features I thought users might need on my last MVP, [Unicooo](https://unicooo.com/). I picked the idea of [YouTube Classified](https://www.youtubeclassified.com/) from my side project to-do list and planned to finish it in two weeks. 
 
-Since I built my last MVP [Unicooo](https://unicooo.com/) using more than a year. Spending lots of time to add features I **Guess** users will need. So when I come up with the idea [YouTube classified](http://www.youtubeclassified.com/) and looking at my todo side-project list which contain more than 20 ideas.
+### Coming Up With The Idea
 
-I just wanna deploy it base on the standard by Harry Percival
+Since I live in China, the Great Firewall blocks the easy access to YouTube that the rest of the world takes for granted. When I finally started to use it about a year ago, I found it hard to find the tech and science related channels that I needed. What I did at first was:
 
->>Is our site usable? Is it better than nothing? Can we make lists on it? Yes, yes, yes.
+- Searching the keyword “Science YouTube Channels Recommendation” on Google.
+- Clicking all the websites displayed on the first page.
+- Building a channel set on my mind because many of them repeatedly recommend the most popular channels such as [minutephysics](https://www.youtube.com/user/minutephysics) and [SmarterEveryDay](https://www.youtube.com/user/destinws2) which are awesome indeed.
 
-[Testing Deployment Using a Staging Site](http://www.obeythetestinggoat.com/book/chapter_manual_deployment.html)
+What the heck.
 
-So if your answer is yes two, deploy it now. Forget about the bugs.
+To make things easier, I also did a little research on “YouTube Channels Classified,” and found [socialblade](https://socialblade.com/youtube/top/100/mostsubscribed). SocialBlade classifies some YouTube channels, but instead of targeting toward the regular YouTube users, the application is for data analysis, where important categories like Product Review and Unboxing are nowhere to be seen. I totally understand. When there are simply too many channels on YouTube, the easiest way is to limit to 20-30 categories because it’s impossible to correctly classify all the channels under the subcategories. Therefore, those categories are 100% correct, but unfortunately useless. 
 
-
-### Come up with the idea
-
-I live in China, so it's not easy to use YouTube since the [Great Firewall](https://en.wikipedia.org/wiki/Great_Firewall). And when I finally start using it a year ago, I found it hard to find channels I need. I'm interested in Tech and Science. What I can do at first is 
-
-- search the keyword **sciences youtube channels recommendation** on google
-- click all the websites show in first page. 
-- Build a **channels set** in my mind because many of them keep mentioning about some hottest channels like [minutephysics](https://www.youtube.com/user/minutephysics) and [SmarterEveryDay](https://www.youtube.com/user/destinws2) which are awesome of course.
-
-So I do a little research about youtube channel classified, I found
-which also classified the youtube channels. I think their application is for data analyze instead of normal youtube users, and they also miss some important categories like Product Review, Unboxings. I totally understand why, when you wanna classified lots channels, you will just want to limit to 20-30 category because it's impossible to correctly classified all the channels in subcategory.So the categories will be 100% correct but useless.
-
-How about YouTube itself? When I search [basketball](https://www.youtube.com/channel/UCkcRYjXjAhsBPVH4aeIPxmQ), YouTube will recommend relative channels in the bottom.
-
+How about YouTube itself? Doesn’t YouTube put channels into categories? When I search [basketball](https://www.youtube.com/channel/UCkcRYjXjAhsBPVH4aeIPxmQ), YouTube does recommend related channels at the bottom. 
 
 ![Basketball](https://raw.githubusercontent.com/Windsooon/blog/master/imgs/how%20I%20build%20the%20MVP/basketball_channel.png)
 
-
-
-But when I search [game](https://www.youtube.com/channel/UCOpNcN46UbXVtpKMrmU4Abg)
+However, when I search [game](https://www.youtube.com/channel/UCOpNcN46UbXVtpKMrmU4Abg), YouTube does not recommend related channels at the bottom, which is very confusing.
 
 ![Gaming](https://raw.githubusercontent.com/Windsooon/blog/master/imgs/how%20I%20build%20the%20MVP/game_channel.png)
 
-YouTube will not recommend relate channels. 
 
-Another point is if I going to work at USA, I wanna know more about its culture, but all my subscribed channels are chinese. So [YouTueb classified](http://www.youtubeclassified.com/) may help. Find your main users is very important.
+Finding the main users is very important, and in this case of [YouTube Classified](https://www.youtubeclassified.com/), we have a very broad user range. Not only can it help English speaking users, people who want to get to know another culture can also make great use of it. For example, if I go to the United States, I would like to know more about its culture, but all of my currently subscribed channels are Chinese, so YouTube Classified may help me by letting me explore popular American channels I’m interested in. 
 
-By now, my base idea is classified some hottest channels for the categories that  users want. like Computer under Sciences, Make up under Beauty&Fashion, Tech Product under Reviews. Business model? I guess once we get big, we can recommend some channel for ad, Because there are so many new channels wanna standout. Now I start programing.
+For now, my main idea is to classify some of the most popular channels into categories and subcategories, such as Computer under Science, Make-Up under Beauty&Fashion, and Tech Products (Reviews) under Reviews. What about our business model? I think once we grow big, we can advertise some channels, because a lot of new channels want to stand out in the massive crowd. Now, I’ll move on to start programming. 
 
-### Host your code
-Usually I open source all my code in Github. Like [Unicooo](https://unicooo.com/) on [Github](https://github.com/Windsooon/Unicooo-django). Not just because it's free, **I also think Code should be open source by default**. But this time I choose to use a private one just for practise, and I'm really to open source. [Bitbucket](https://bitbucket.org/product) is great and offer Unlimited private repos. I only got one problem when I using it. I miss set my ssh key on the repo instead of my personal page
 
+### Version Control
+
+I usually open source my entire code on Github, just like [Unicooo-django](https://github.com/Windsooon/Unicooo-django). Not only because it’s free, but also because I think code in general should be open source by default.(Now [youtube-category](https://bitbucket.org/WindsonYang/youtube-category) is open source), 
+[Bitbucket](https://bitbucket.org/product) is great and offers unlimited private repos. My only problem when using it is that I have to set my ssh key to my personal page instead of the repo. 
+
+You should not set your ssh key here.
 ![repo](https://raw.githubusercontent.com/Windsooon/blog/master/imgs/how%20I%20build%20the%20MVP/bitbucket_ca.png)
 
-[personal](https://raw.githubusercontent.com/Windsooon/blog/master/imgs/how%20I%20build%20the%20MVP/bitbucket_personal.png?raw=true)
+Instead, add to your personal page.
 
-### Run your code
-I choose [pythonanywhere](http://pythonanywhere.com/), you can use AWS or Digitalocean or whatever you like. But I find pythonanywhere is super easy to set up and their customer service is quite and helpful. Most important, you don't have to worry about the nginx settings or other stuff.
+![personal](https://raw.githubusercontent.com/Windsooon/blog/master/imgs/how%20I%20build%20the%20MVP/bitbucket_personal.png?raw=true)
 
-### Signing certificates 
-[Let's encrypt](https://letsencrypt.org/) with no doubt, and [dehydrated](https://github.com/lukas2511/dehydrated) is great tool to set it up.
+### Hosting the code
 
-### Choose your Domain
-Since I focus on youtube users, I use something start of youtube. So when you type YouTube on the browser, the browser will recommend the website.
+I compared among [PythonAnywhere](https://www.pythonanywhere.com/), [Heroku](https://www.heroku.com/), [AWS](https://aws.amazon.com/), and [DigitalOcean](https://www.digitalocean.com/).
+
+- PythonAnywhere costs less than Heroku. [Difference between PythonAnywhere and Heroku](https://blog.pythonanywhere.com/65/)
+- AWS is not easy for the beginners, and it may take quite a long time to set up. If you would like to know more about AWS, this guide may help.[Amazon Web Services — a practical guide](https://github.com/open-guides/og-aws)
+- DigitalOcean is great, and it also has some useful [blogs](https://blog.digitalocean.com/)
+
+I choose PythonAnywhere for at least these four reasons.
+
+- Super easy to set up and you can usually deploy it in 10 minutes.
+- Offers a [free plan](https://www.pythonanywhere.com/pricing/)
+- Customer service is quite helpful(Usually reply under two hours). 
+- The author of Test-Driven-Development with Python, Harry Percival, used to work here. I learned a lot from this book. Thanks, Harry Percival.
+
+
+### Signing certificates
+
+[Let's encrypt](https://letsencrypt.org/) and use [dehydrated](https://github.com/lukas2511/dehydrated) as a great tool to set it up. Be aware that every time after you re-apply the certificate, you have to notify PythonAnywhere people for updating.
+
+
+### Domain
+
+Since YouTube Classified is based on YouTube and that I want to attract YouTube users as our users, I titled something that starts with YouTube, so that when the users type in YouTube on the browser, it will show the website. 
 
 ![browser](https://raw.githubusercontent.com/Windsooon/blog/master/imgs/how%20I%20build%20the%20MVP/broswer.png)
 
-I choose Godaddy for domain hosting. I searched the coupon for buying a .com domain, At first, it work well, the price get 90% off. But when I pay for it, I get payment error. I ask the Godaddy guys for help, They said the coupon is invalid. So I gave up and pay about $8 for youtubeclassified for a year.(I can get better price when I pay two years together, but I'm not sure this business idea work, so I choose just pay for one year.)
+After picking Godaddy as the domain hosting, I searched the coupon for buying a “.com” domain. At first, the 90% off coupon looked great, but when I was paying for it, I received a payment error. When I asked people who work at Godaddy for help, they told me that the coupon was no longer valid, so I gave up the idea of coupon and paid about $8 for “youtubeclassified.com” for a year. I can get a better pricing if I pay for two years at a time, but since I’m not sure if this business idea will work, I just paid for one year. 
 
-### Domain Email hosting
-There are a lot of Email hosting on web, I only found [Zoho Mail](https://www.zoho.com/mail/) have a free plan, So I choose it. After some easy setup it works.
+### Professional Email 
 
-### Add Google analytics
-For people who haven't use google analytics before. It will let you know which page you user focus and where are they come form like this
+There are a lot of business email hosting on internet, but [Zoho mail](https://www.zoho.com/mail/) is the only one I found with a free plan, so that’s my pick. It worked after some easy setup. 
+
+
+### Adding Google analytics
+
+For people who don’t know what google analytics is, it’s a tool that shows you which page your users focus on and what regions the users are from.
 
 ![page](https://raw.githubusercontent.com/Windsooon/blog/master/imgs/how%20I%20build%20the%20MVP/category_view.png)
 ![location](https://raw.githubusercontent.com/Windsooon/blog/master/imgs/how%20I%20build%20the%20MVP/location.png)
 
-Remember to filter your own IP in settings.
+Remember to filter out your own IP address in the setting.
 
-### Manager Email subscribe
-I use [mailchimp](https://mailchimp.com/) to manager subscribe users, They have great api docs, great customer service as well as a free plan.My use case is When user subscribe, we also get the page url to identify which category he is interested. At first I get lost at group and segment, after some research I found out what I have to do is.  
+### Email Subscription Management
 
-- Send email and url to my backend.
-- Create group use the group api [Create the group](https://developer.mailchimp.com/documentation/mailchimp/reference/lists/interest-categories/interests/), (If the group already exist, it will return a 400, but just ignore it)
-- Loop over the groups by group name inside your interest-category to get the group id. 
-- [Add the email to this group](https://developer.mailchimp.com/documentation/mailchimp/reference/lists/members/).
+I use [MailChimp](https://mailchimp.com/) to manage subscription from users. It has great API docs, great customer service, as well as a free plan. When a user subscribes under a certain subcategory, I get a page URL to identify with the sub category page that the user is interested in. At first, I got lost at group and segment, but after some research, I found out what I have to do:
+
+- Send email and URL to my backend.
+- Use the group API to [Create the group](https://developer.mailchimp.com/documentation/mailchimp/reference/lists/interest-categories/interests/). (If the group already exists, it will return a 400, but you can just ignore it.)
+- Loop over the groups by group name inside your interested subcategory to get the group ID.
+- [Add the email to this group](https://developer.mailchimp.com/documentation/mailchimp/reference/lists/members/)
 
 
 ### Coding
-I started coding at 2017-06-28, Before that, I build a [repos](https://github.com/Windsooon/awesome-youtube-category) in Github then submit it on hackernews to attract hackers help classified together. It didn't get a lot attention, But you can use Github and hackernews for help, there is so many awesome-xxx right now.
 
-As you can see, the application is dead simple, just use youtube api to get some data then display. as I said, I choose to make it simple.At first, I used [django-hackathon](https://github.com/Windsooon/django-hackathon) which for hackathon, I just use some hours for the backend, (Thanks for awesome django and django restframework).Of course I know I have to spend a lot of time on frontend to make it look better. I tried full page ajax which gives users better experience. But I found it hard to maintain when the application have more and more logic. So I delete that part of code then rewrite it.
+I started coding on June 28th, 2017. Before that, I built a [repo](https://github.com/Windsooon/awesome-youtube-category) in Github and submitted it on HackerNews to attract hackers to help classify together. It didn’t get much attention, but Github and HackerNews are still great places to ask for help and to find resources. There are so many awesome-xxx going on right now. 
 
+As you can see, the application is indeed simple. Use YouTube API to get some data and then display it. At first, I used [django-hackathon](https://github.com/Windsooon/django-hackathon) which is for Hackathon, and I spent some hours on building the backend (a shout-out to the awesome Diango and Diango Rest FrameWork). I tried full page Ajax that gives users a better experience, but I find it hard to run when the application begins to have more logic, so I deleted that part of the code and rewrote it. Remember, delete the useless code as early as possible.
+
+I followed [Web Design in 4 minutes](http://jgthms.com/web-design-in-4-minutes/) for the basic design. Then spend some time on responsive design. I use [pure](https://purecss.io/) as my frontend framework, it work well except for the font size. If you're also not familiar with it, check these excellent articles [How to make your typography responsive](http://www.creativebloq.com/css3/handling-typography-responsive-design-4122794) and [Everything I know about Responsive Web Typography](https://zellwk.com/blog/responsive-typography/). Basically, what you have to do is to use vw: 
+
+    @media only screen and (max-width: 767px) {
+        .font-class {
+            font-size: 6vw;
+        }
+    }
+
+
+
+### Suggestion from Users
+
+After finishing my first version, I immediately sent the link to my friends and asked for their suggestion. Specifically, I asked them:
+
+- Any confusion when using it?
+- Any business model idea?
+
+None of them are programmers, but both of them gave me excellent advice. Philip suggested giving each subcategory an individual page. Before that idea was given, under a certain category page, it lists all the subcategories on the same page, such as Math, Computer and Physics under the Science category. I changed it within a day. Julian suggested to let users choose the categories they love so that they will be more likely to come back. It’s a great idea, but I didn’t implement it right away because it’s too complicated and I wasn’t sure if many users would need this feature. I also let my workmate use the website in front of me so that I could know which part confuses him. I paid attention to where he clicked, and that if he knew how to search for subcategories. After that, I changed some button styles and removed some href to beautify the website. I also learned from my co-founder, Jessica. She gave me some good advice on navigation and sorting of the channels. 
+
+To be honest, what they suggested are quite useful and obviously, and I don’t know why I missed these ideas when programming. I focused more on the structure of the code instead of what the users really need. Thus, I’d say listen to your friends before you spend a lot of time on a new feature, because they may not be hackers, but they represent the real users who will be spending time on your MVP.
 
 ### Business model
-After I finish my first version, I immediately send to my friends and ask for suggestion. I asked them 
 
-- Anything confuse when you're using it.
-- Any business model advice.
+I think we should have some features that YouTube doesn’t have, and I thought of adding stories about YouTubers, on how they built and maintain their channels. It’s fun to their followers and useful for new YouTubers. But in the end, I chose to just add recommended websites at the bottom of each subcategory. People interested in math are likely to be also interested in science related websites and blogs. I don’t have time to implement it yet, so I simply let users submit websites they recommend. 
+For now, we just recommend the hottest channels with more than 100k subscribers. But I realized that we should also be standing in the YouTubers’ shoes and think for them. If I were a YouTubers, what can this application do for me? There are so many popular channels already, and it’s very hard for a new YouTuber to stand out, therefore my next step goes to adding newer channels.
 
-Both of them are not programmer, and both of them give me excellent advise. Philip said I should add a subcategory. Before it, When you click Science, it will list all subjects like Math, Computer, Physics. I fixed it within a day. Julian said why not let users choose categories they love. These will let user come back. I didn't choose to implement it right away because is too complicated and I not sure other users would need this. 
+###Marketing
 
-I also think what we can have but YouTube don't, I have thought add story about YouTuber. How they build their channel, how to maintain. It's fun to their followers and useful to new YouTuber. But finally I choose to add recommend website at the bottom of subcategory. People interest in Math will also interest in Science American website and other sciences blogs. I don't have time to complete it yet.So I let user submit website they recommend.I also ask my workmate to use the application in front of me. So I could know which part will confused him. Where he will try to click. Does he know how to search the subcategory. After that, I change some button styles and some remove some href make the application better. I also learn from my cofounder Jessica, She also gave me some good advise about how to navigate, how to sort the channels. Actually, what they asked is very reasonable, and I don't know why I missed when I programing. I just focus the structure of code instead of what user really need. So, listen to your friends before you spend a lot of time in a new feature. They may not hackers, but they are real users and they will spend their time on your MVP.
-
-Now we just recommend the hottest channels more than 100k subscribes. But I realized we also stand in the YouTubers's shoes. What if I'm a YouTuber, What can the application can do for me. There're so many channels already, a new YouTuber can't find a way to standout. So my next step is add new channels in it.
-
-### Marketing
-
-I find a list to submit my application
+I made a list to submit and advertise my application:
 
 1. [hackernews](https://news.ycombinator.com/)
 2. [producthunts](https://www.producthunt.com/)
@@ -119,28 +146,237 @@ I find a list to submit my application
 
 #### Others
 
-1. [Tech website](https://medium.com/@PitchMantra/100-best-places-to-promote-your-startup-6ad7a52d79c0)
-2. [Tech website2](https://triphappy.com/blog/131-startup-directories-to-promote-your-startup/1)
-3. [Tech website3](http://www.inboundio.com/blog/27-websites-to-submit-your-startup/)
+1. [Tech websites](https://medium.com/@PitchMantra/100-best-places-to-promote-your-startup-6ad7a52d79c0)
+2. [Tech websites](https://triphappy.com/blog/131-startup-directories-to-promote-your-startup/1)
+3. [Tech websites](http://www.inboundio.com/blog/27-websites-to-submit-your-startup/)
+4. Quora and other blogs
 
-#### Quora and blog
-We answer question on Quora and post comments on blogs about youtube channel. We carefully choose the channels that really useful to the users and other comments didn't mention.
+We answer questions on Quora and post comments on blogs about YouTube channel recommendation, as ways to advertise our application. We carefully choose the really useful channels that other comments didn’t mention. Then, I wrote this article to share my experience on how to build this MVP.
 
 
-### Feed back
-Once again, hackernews guys don't pay any attention on my application, Actually, I know why. At first, it's not geek enough, just use YouTube api then classified some channels. Second, it's not fun and not impressed. Third, As a tool, I don't need it. You know what, I think so, Before I build the first version, I had thought to classified the channels by the its title and description use machine learning. Because I just learn something about machine learning and I wanna have a try. And I also thought of build a iOS application instead of a website for the same reason. 
+### Hi hackers
 
-But this remind me of a post on [Ask HN: Who is hiring? (May 2017)](https://news.ycombinator.com/item?id=14238005) the comment from xando
+Once again, HackerNews guys didn’t pay any attention to my application, but I understand. Firstly, it’s not geeky enough to just use YouTube API and then classify some channels. Secondly, it’s not impressive. Thirdly, as a tool, it’s not that useful. I think so too. Before building the first version, I thought about classifying the channels by their titles and description using Naive Bayes, a tool that I have recently learned about and wanted to give it a try. I also thought of building an iOS application instead of a website for the same reason. 
+
+This reminds me of a comment made by “xando” under the post on [Ask HN: Who is hiring? (May 2017)](https://news.ycombinator.com/item?id=14238005)
 
 >Hey, a friendly reminder. I’m parsing the thread, all job offers added here are also available on the map on
 https://whoishiring.io or just HN items https://whoishiring.io/search/36.0440/-90.8984/4?source=hn
-If you post here, please use the below format to help me with parsing. If you won’t, no worries, I will do my best to get all the things right.
+>If you post here, please use the below format to help me with parsing. If you won’t, no worries, I will do my best to get all the things right.
 
-This guy build https://whoishiring.io and want more people submit their jobs there. Instead using machine learning or geek algorithm to crawl the data and classified it, he just asked people for help. So I think, Is my purpose to build this application is to show others I'm geek or for users to really use it. And what if I spend a lot of time in machine learning then people don't like this idea at all.So I just control myself and get the shit done.
+      1) {company} | {job title} | {locations} | {attrs: ONSITE, REMOTE, INTERNS, VISA, SALARY, company-url}
+      Google | Software Developer | SF | VISA https://google.com
+      DuckDuckGo | Software Developer | Paoli PA | REMOTE, VISA, SALARY:100k-120k
+      Facebook | Web-developer | Zurich | SALARY:120k CHF 
+      Google | Site Reliability Engineer | London | SALARY:120k GBP, VISA, REMOTE
+or
+  
+      2) {company} | {job title} | {location}
+      Google | Site Reliability Engineer | Sydney
+      Facebook | Web-developer | Zurich
+      
+>I’m using this regex to test the first line, you can test it here https://regex101.com/r/relwQD/3
 
-As Paul Graham write in hacker and painter ( I can't find the the original because I read the chinese version.)
+      \s*(?P<company>[^|]+?)\s*\|\s*(?P<title>[^|]+?)\s*\|\s*(?P<locations>[^|]+?)\s*(?:\|\s*(?P<attrs>.+))?$
+>Check bellow for the SALARY regex.
 
-People think hacker design everything before coding. But they are not, they just coding->thinking->change->coding.
+      SALARY:(?P<salary_min>\d+(?:k|K)?)(?:\s*\-\s*(?P<salary_max>\d+(?:k|K)?)?)?(?:\s?(?P<currency>[A-Z]{3}))?     
+>and you can test it as well https://regex101.com/r/SRWkMz/2/
+—— xando, AskHN
+
+This guy built https://whoishiring.io and wants more people to submit their jobs there. Instead of using machine learning or algorithm to crawl the data and sort it, he just simply asked people format their comments! So I think, my purpose is to build this application for YouTube users to really make use of it, so how can I spend so much time on machine learning risking the outcome that people don’t like the idea at all? So, I just control myself and try to get this shit done. 
+At this point, I just simply want to evaluate it base on Harry Percival’s three standards on [Test-Driven-Development with Python](http://www.obeythetestinggoat.com/book/chapter_manual_deployment.html): 
+
+>Is the site usable? Is it better than nothing? Can we make lists on it?
+
+The rule of thumb is, if “yes” is the only answer, then don’t mind the bugs and deploy it now. Fortunately, the idea of YouTube Classified passed. 
+As Paul Graham once written in Hacker and Painter (I can’t find the original quote because I read the Chinese version):
+“ People think hackers design everything before coding. But they don’t. They are just: coding->thinking->change->coding.”
 
 ### What is next
-Build four side projects in a month. Happy coding.
+
+Hackathon in a month: Build four side projects in a month. Happy coding.
+
+
+
+
+To make things easier, I also did a little research on “YouTube Channels Classified,” and found [socialblade](https://socialblade.com/youtube/top/100/mostsubscribed). SocialBlade classifies some YouTube channels, but instead of targeting toward the regular YouTube users, the application is for data analysis, where important categories like Product Review and Unboxing are nowhere to be seen. I totally understand. When there are simply too many channels on YouTube, the easiest way is to limit to 20-30 categories because it’s impossible to correctly classify all the channels under the subcategories. Therefore, those categories are 100% correct, but unfortunately useless. 
+
+How about YouTube itself? Doesn’t YouTube put channels into categories? When I search [basketball](https://www.youtube.com/channel/UCkcRYjXjAhsBPVH4aeIPxmQ), YouTube does recommend related channels at the bottom. 
+
+![Basketball](https://raw.githubusercontent.com/Windsooon/blog/master/imgs/how%20I%20build%20the%20MVP/basketball_channel.png)
+
+However, when I search [game](https://www.youtube.com/channel/UCOpNcN46UbXVtpKMrmU4Abg), YouTube does not recommend related channels at the bottom, which is very confusing.
+
+![Gaming](https://raw.githubusercontent.com/Windsooon/blog/master/imgs/how%20I%20build%20the%20MVP/game_channel.png)
+
+
+Finding the main users is very important, and in this case of [YouTube Classified](https://www.youtubeclassified.com/), we have a very broad user range. Not only can it help English speaking users, people who want to get to know another culture can also make great use of it. For example, if I go to the United States, I would like to know more about its culture, but all of my currently subscribed channels are Chinese, so YouTube Classified may help me by letting me explore popular American channels I’m interested in. 
+
+For now, my main idea is to classify some of the most popular channels into categories and subcategories, such as Computer under Science, Make-Up under Beauty&Fashion, and Tech Products (Reviews) under Reviews. What about our business model? I think once we grow big, we can advertise some channels, because a lot of new channels want to stand out in the massive crowd. Now, I’ll move on to start programming. 
+
+
+### Version Control
+
+I usually open source my entire code on Github, just like [Unicooo-django](https://github.com/Windsooon/Unicooo-django). Not only because it’s free, but also because I think code in general should be open source by default.(Now [youtube-category](https://bitbucket.org/WindsonYang/youtube-category) is open source), 
+[Bitbucket](https://bitbucket.org/product) is great and offers unlimited private repos. My only problem when using it is that I set my ssh key to the repo instead of my personal page. 
+
+You should not set your ssh key here.
+![repo](https://raw.githubusercontent.com/Windsooon/blog/master/imgs/how%20I%20build%20the%20MVP/bitbucket_ca.png)
+
+Instead, add to your personal page.
+
+![personal](https://raw.githubusercontent.com/Windsooon/blog/master/imgs/how%20I%20build%20the%20MVP/bitbucket_personal.png?raw=true)
+
+### Hosting the code
+
+I compared among [PythonAnywhere](https://www.pythonanywhere.com/), [Heroku](https://www.heroku.com/), [AWS](https://aws.amazon.com/), and [DigitalOcean](https://www.digitalocean.com/).
+
+- PythonAnywhere costs less than Heroku. [Difference between PythonAnywhere and Heroku](https://blog.pythonanywhere.com/65/)
+- AWS is not easy for the beginners, and it may take quite a long time to set up. If you would like to know more about AWS, this guide may help.[Amazon Web Services — a practical guide](https://github.com/open-guides/og-aws)
+- DigitalOcean is great, and it also has some useful [blogs](https://blog.digitalocean.com/)
+
+I choose PythonAnywhere for at least these four reasons.
+
+- Super easy to set up and you can usually deploy it in 10 minutes.
+- Offers a [free plan](https://www.pythonanywhere.com/pricing/)
+- Customer service is quite helpful(Usually reply under two hours). 
+- The author of Test-Driven-Development with Python, Harry Percival, used to work here. I learned a lot from this book. Thanks, Harry Percival.
+
+
+### Signing certificates
+
+[Let's encrypt](https://letsencrypt.org/) and use [dehydrated](https://github.com/lukas2511/dehydrated) as a great tool to set it up. Be aware that every time after you re-apply the certificate, you have to notify PythonAnywhere people for updating.
+
+
+### Domain
+
+Since YouTube Classified is based on YouTube and that I want to attract YouTube users as our users, I titled something that starts with YouTube, so that when the users type in YouTube on the browser, it will show the website. 
+
+![browser](https://raw.githubusercontent.com/Windsooon/blog/master/imgs/how%20I%20build%20the%20MVP/broswer.png)
+
+After picking Godaddy as the domain hosting, I searched the coupon for buying a “.com” domain. At first, the 90% off coupon looked great, but when I was paying for it, I received a payment error. When I asked people who work at Godaddy for help, they told me that the coupon was no longer valid, so I gave up the idea of coupon and paid about $8 for “youtubeclassified.com” for a year. I can get a better pricing if I pay for two years at a time, but since I’m not sure if this business idea will work, I just paid for one year. 
+
+### Professional Email 
+
+There are a lot of business email hosting on internet, but [Zoho mail](https://www.zoho.com/mail/) is the only one I found with a free plan, so that’s my pick. It worked after some easy setup. 
+
+
+### Adding Google analytics
+
+For people who don’t know what google analytics is, it’s a tool that shows you which page your users focus on and what regions the users are from.
+
+![page](https://raw.githubusercontent.com/Windsooon/blog/master/imgs/how%20I%20build%20the%20MVP/category_view.png)
+![location](https://raw.githubusercontent.com/Windsooon/blog/master/imgs/how%20I%20build%20the%20MVP/location.png)
+
+Remember to filter out your own IP address in the setting.
+
+### Email Subscription Management
+
+I use [MailChimp](https://mailchimp.com/) to manage subscription from users. It has great API docs, great customer service, as well as a free plan. When a user subscribes under a certain subcategory, I get a page URL to identify with the sub category page that the user is interested in. At first, I got lost at group and segment, but after some research, I found out what I have to do:
+
+- Send email and URL to my backend.
+- Use the group API to [Create the group](https://developer.mailchimp.com/documentation/mailchimp/reference/lists/interest-categories/interests/). (If the group already exists, it will return a 400, but you can just ignore it.)
+- Loop over the groups by group name inside your interested subcategory to get the group ID.
+- [Add the email to this group](https://developer.mailchimp.com/documentation/mailchimp/reference/lists/members/)
+
+
+### Coding
+
+I started coding on June 28th, 2017. Before that, I built a [repo](https://github.com/Windsooon/awesome-youtube-category) in Github and submitted it on HackerNews to attract hackers to help classify together. It didn’t get much attention, but Github and HackerNews are still great places to ask for help and to find resources. There are so many awesome-xxx going on right now. 
+
+As you can see, the application is indeed simple. Use YouTube API to get some data and then display it. At first, I used [django-hackathon](https://github.com/Windsooon/django-hackathon) which is for Hackathon, and I spent some hours on building the backend (a shout-out to the awesome Diango and Diango Rest FrameWork). I tried full page Ajax that gives users a better experience, but I find it hard to run when the application begins to have more logic, so I deleted that part of the code and rewrote it. Remember, delete the useless code as early as possible.
+
+I followed [Web Design in 4 minutes](http://jgthms.com/web-design-in-4-minutes/) for the basic design. Then spend some time on responsive design. I use [pure](https://purecss.io/) as my frontend framework, it work well except for the font size. If you're also not familiar with it, check these excellent articles [How to make your typography responsive](http://www.creativebloq.com/css3/handling-typography-responsive-design-4122794) and [Everything I know about Responsive Web Typography](https://zellwk.com/blog/responsive-typography/). Basically, what you have to do is use vw: 
+
+    @media only screen and (max-width: 767px) {
+        .font-class {
+            font-size: 6vw;
+        }
+    }
+
+
+
+### Suggestion from Users
+
+After finishing my first version, I immediately sent the link to my friends and asked for their suggestion. Specifically, I asked them:
+
+- Any confusion when using it?
+- Any business model idea?
+
+None of them are programmers, but both of them gave me excellent advice. Philip suggested giving each subcategory an individual page. Before that idea was given, under a certain category page, it lists all the subcategories on the same page, such as Math, Computer and Physics under the Science category. I changed it within a day. Julian suggested to let users choose the categories they love so that they will be more likely to come back. It’s a great idea, but I didn’t implement it right away because it’s too complicated and I wasn’t sure if many users would need this feature. I also let my workmate use the website in front of me so that I could know which part confuses him. I paid attention to where he clicked, and that if he knew how to search for subcategories. After that, I changed some button styles and removed some href to beautify the website. I also learned from my co-founder, Jessica. She gave me some good advice on navigation and sorting of the channels. 
+
+To be honest, what they suggested are quite useful and obviously, and I don’t know why I missed these ideas when programming. I focused more on the structure of the code instead of what the users really need. Thus, I’d say listen to your friends before you spend a lot of time on a new feature, because they may not be hackers, but they represent the real users who will be spending time on your MVP.
+
+### Business model
+
+I think we should have some features that YouTube doesn’t have, and I thought of adding stories about YouTubers, on how they built and maintain their channels. It’s fun to their followers and useful for new YouTubers. But in the end, I chose to just add recommended websites at the bottom of each subcategory. People interested in math are likely to be also interested in science related websites and blogs. I don’t have time to implement it yet, so I simply let users submit websites they recommend. 
+For now, we just recommend the hottest channels with more than 100k subscribers. But I realized that we should also be standing in the YouTubers’ shoes and think for them. If I were a YouTubers, what can this application do for me? There are so many popular channels already, and it’s very hard for a new YouTuber to stand out, therefore my next step goes to adding newer channels.
+
+###Marketing
+
+I made a list to submit and advertise my application:
+
+1. [hackernews](https://news.ycombinator.com/)
+2. [producthunts](https://www.producthunt.com/)
+3. [Wired](https://www.wired.com/)
+4. [Betalist](https://betalist.com/)
+5. [TheNextWeb](https://thenextweb.com)
+6. [lifehacker](https://lifehacker.com/)
+7. [reddit/startup](https://www.reddit.com/r/startups/)
+8. [reddit/youtube](https://www.reddit.com/r/youtube/)
+9. [reddit/Entrepreneur](https://www.reddit.com/r/Entrepreneur/)
+10. [reddit/SideProject](https://www.reddit.com/r/SideProject/)
+
+#### Others
+
+1. [Tech websites](https://medium.com/@PitchMantra/100-best-places-to-promote-your-startup-6ad7a52d79c0)
+2. [Tech websites](https://triphappy.com/blog/131-startup-directories-to-promote-your-startup/1)
+3. [Tech websites](http://www.inboundio.com/blog/27-websites-to-submit-your-startup/)
+4. Quora and other blogs
+
+We answer questions on Quora and post comments on blogs about YouTube channel recommendation, as ways to advertise our application. We carefully choose the really useful channels that other comments didn’t mention. And also, Then, I wrote this article to share my experience on how to build the MVP.
+
+### Hi hackers
+
+Once again, HackerNews guys didn’t pay any attention to my application, but I understand. Firstly, it’s not geeky enough to just use YouTube API and then classify some channels. Secondly, it’s not impressive. Thirdly, as a tool, it’s not that useful. I think so too. Before building the first version, I thought about classifying the channels by their titles and description using Naive Bayes, a tool that I have recently learned about and wanted to give it a try. I also thought of building an iOS application instead of a website for the same reason. 
+
+This reminds me of a comment made by “xando” under the post on [Ask HN: Who is hiring? (May 2017)](https://news.ycombinator.com/item?id=14238005)
+
+>Hey, a friendly reminder. I’m parsing the thread, all job offers added here are also available on the map on
+https://whoishiring.io or just HN items https://whoishiring.io/search/36.0440/-90.8984/4?source=hn
+>If you post here, please use the below format to help me with parsing. If you won’t, no worries, I will do my best to get all the things right.
+
+      1) {company} | {job title} | {locations} | {attrs: ONSITE, REMOTE, INTERNS, VISA, SALARY, company-url}
+      Google | Software Developer | SF | VISA https://google.com
+      DuckDuckGo | Software Developer | Paoli PA | REMOTE, VISA, SALARY:100k-120k
+      Facebook | Web-developer | Zurich | SALARY:120k CHF 
+      Google | Site Reliability Engineer | London | SALARY:120k GBP, VISA, REMOTE
+or
+  
+      2) {company} | {job title} | {location}
+      Google | Site Reliability Engineer | Sydney
+      Facebook | Web-developer | Zurich
+      
+>I’m using this regex to test the first line, you can test it here https://regex101.com/r/relwQD/3
+
+      \s*(?P<company>[^|]+?)\s*\|\s*(?P<title>[^|]+?)\s*\|\s*(?P<locations>[^|]+?)\s*(?:\|\s*(?P<attrs>.+))?$
+>Check bellow for the SALARY regex.
+
+      SALARY:(?P<salary_min>\d+(?:k|K)?)(?:\s*\-\s*(?P<salary_max>\d+(?:k|K)?)?)?(?:\s?(?P<currency>[A-Z]{3}))?     
+>and you can test it as well https://regex101.com/r/SRWkMz/2/
+—— xando, AskHN
+
+This guy built https://whoishiring.io and wants more people to submit their jobs there. Instead of using machine learning or algorithm to crawl the data and sort it, he just simply asked people format their submit! So I think, my purpose is to build this application for YouTube users to really make use of it, so how can I spend so much time on machine learning risking the outcome that people don’t like the idea at all? So, I just control myself and try to get this shit done. 
+At this point, I just simply wanted to evaluate it base on Harry Percival’s three standards on [Test-Driven-Development with Python](http://www.obeythetestinggoat.com/book/chapter_manual_deployment.html): 
+
+>Is the site usable? Is it better than nothing? Can we make lists on it?
+
+The rule of thumb is, if “yes” is the only answer, then don’t mind the bugs and deploy it now. Fortunately, the idea of YouTube Classified passed. 
+
+As Paul Graham once written in Hacker and Painter (I can’t find the original quote because I read the Chinese version):
+“ People think hackers design everything before coding. But they don’t. They are just: coding->thinking->change->coding.”
+
+### What is next
+
+Hackathon in a month: Build four side projects in a month. Happy coding.
