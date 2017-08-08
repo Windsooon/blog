@@ -101,7 +101,7 @@ Since YouTube Classified is based on YouTube and that I want to attract YouTube 
 
 After picking Godaddy as the domain hosting, I searched the coupon for buying a “.com” domain. At first, the 90% off coupon looked great, but when I was paying for it, I received a payment error. When I asked people who work at Godaddy for help, they told me that the coupon was no longer valid, so I gave up the idea of coupon and paid about $8 for “youtubeclassified.com” for a year. I can get a better pricing if I pay for two years at a time, but since I’m not sure if this business idea will work, I just paid for one year. 
 
-####Update 
+#### Update 
 Don't use a domain name that contain other company's trademark. Or you may be caught in a legal dispute and change domain is a nightmare.
 
 ### Professional Email 
